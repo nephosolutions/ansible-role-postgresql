@@ -1,5 +1,9 @@
 # {{ ansible_managed }}
 
 Package: *
-Pin: release o=apt.postgresql.org
+Pin: release o=apt.postgresql.org,c=main
 Pin-Priority: {{ postgresql_apt_pin_priority }}
+
+Package: *
+Pin: release o=apt.postgresql.org,c={{ postgresql_version }}
+Pin-Priority: {{ postgresql_apt_pin_priority + 500 }}
