@@ -1,10 +1,13 @@
 # file: postgresql/meta/main.yml
 
 galaxy_info:
-  author: pjan vandaele
-  company: ANXS
-  description: "Install and configure PostgreSQL, dependencies, extensions, databases and users."
+  role_name: postgresql
+  description: |
+    "Install and configure PostgreSQL, dependencies, extensions, databases and users."
+    "Forked from https://github.com/ANXS/postgresql"
   min_ansible_version: 2.4.0
+  author: pjan vandaele
+  company: NephoSolutions
   license: MIT
 
   platforms:

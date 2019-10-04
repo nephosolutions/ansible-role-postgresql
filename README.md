@@ -1,38 +1,35 @@
-## ANXS - PostgreSQL [![Build Status](https://travis-ci.org/ANXS/postgresql.svg?branch=master)](https://travis-ci.org/ANXS/postgresql)
-
----
-Help Wanted! If you are able and willing to help maintain this Ansible role then please open a GitHub issue. A lot of people seem to use this role and we (quite obviously) need assistance!
-💖
----
+# NephoSolutions - Ansible role PostgreSQL
 
 Ansible role which installs and configures PostgreSQL, extensions, databases and users.
 
+Forked from [ANXS/postgresql](https://github.com/ANXS/postgresql)
 
-#### Installation
+## Installation
 
 This has been tested on Ansible 2.4.0 and higher.
 
 To install:
 
-```
+```sh
 ansible-galaxy install ANXS.postgresql
 ```
 
-#### Example Playbook
+## Example Playbook
 
 Including an example of how to use your role:
 
+```yaml
     - hosts: postgresql-server
       become: yes
       roles:
          - { role: anxs.postgresql }
+```
 
-#### Dependencies
+## Dependencies
 
 - ANXS.monit ([Galaxy](https://galaxy.ansible.com/list#/roles/502)/[GH](https://github.com/ANXS/monit)) if you want monit protection (in that case, you should set `monit_protection: true`)
 
-
-#### Compatibility matrix
+## Compatibility matrix
 
 | Distribution / PostgreSQL | <= 9.3 | 9.4 | 9.5 | 9.6 | 10 | 11 | 12 |
 | ------------------------- |:---:|:---:|:---:|:---:|:--:|:--:|:--:|
@@ -51,9 +48,7 @@ Including an example of how to use your role:
 - :interrobang: - maybe works, not tested
 - :no_entry: - PostgreSQL has reached EOL
 
-
-
-#### Variables
+## Variables
 
 ```yaml
 # Basic settings
@@ -116,8 +111,7 @@ postgresql_user_privileges:
 
 There's a lot more knobs and bolts to set, which you can find in the [defaults/main.yml](./defaults/main.yml)
 
-
-#### Testing
+## Testing
 
 This project comes with a Vagrantfile, this is a fast and easy way to test changes to the role, fire it up with `vagrant up`
 
@@ -129,24 +123,25 @@ If you want to toy with the test play, see [tests/playbook.yml](./tests/playbook
 
 If you are contributing, please first test your changes within the vagrant environment, (using the targeted distribution), and if possible, ensure your change is covered in the tests found in [.travis.yml](./.travis.yml)
 
-
-#### License
+## License
 
 Licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-
-#### Thanks
+## Thanks
 
 Creator:
+
 - [Pjan Vandaele](https://github.com/pjan)
 
 Maintainers:
+
 - [Jonathan Lozada D.](https://github.com/jlozadad)
 - [Jonathan Freedman](https://github.com/otakup0pe)
 - [Sergei Antipov](https://github.com/UnderGreen)
 - [Greg Clough](https://github.com/gclough)
 
 Top Contributors:
+
 - [David Farrington](https://github.com/farridav)
 - [Jesse Lang](https://github.com/jesselang)
 - [Michael Conrad](https://github.com/MichaelConrad)
@@ -155,7 +150,6 @@ Top Contributors:
 
 - [Ralph von der Heyden](https://github.com/ralph)
 
-
-#### Feedback, bug-reports, requests, ...
+## Feedback, bug-reports, requests, ...
 
 Are [welcome](https://github.com/ANXS/postgresql/issues)!
